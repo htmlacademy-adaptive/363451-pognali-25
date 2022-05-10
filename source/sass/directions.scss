@@ -42,8 +42,10 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 166px;
-    padding-bottom: 138px;
-    background-position: top 80px right 60px;
+    padding-bottom: 100px;
+    padding-left: 105px;
+    background-position: top 90px right 60px,
+      top 90px left 60px;
     display: grid;
     grid-template-areas:
       "list title"
@@ -57,21 +59,26 @@
   margin: 0;
   padding: 0;
   padding-left: 25px;
-  padding-bottom: 3px;
+  padding-bottom: 20px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 700;
   color: $special-orange;
 
   @media (min-width: $tablet-width) {
-    padding-bottom: 30px;
+    padding-bottom: 55px;
     font-size: 45px;
     line-height: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
   }
 }
 
 .directions__text {
   grid-area: text;
+  margin: 0;
   padding-left: 25px;
   padding-right: 50px;
   margin-bottom: 60px;
@@ -83,6 +90,11 @@
     font-size: 28px;
     line-height: 33px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 28px;
+    margin-bottom: 65px;
+  }
 }
 
 .directions__list {
@@ -91,12 +103,16 @@
   display: flex;
   flex-direction: column;
   grid-area: list;
-  margin-bottom: 16px;
+  margin-bottom: 26px;
 
   @media (min-width: $tablet-width) {
     margin-left: 25px;
     margin-right: 35px;
     margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 145px;
   }
 }
 
@@ -154,7 +170,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   background-color: $color-white;
-  border-radius: 20px;
+  border-radius: 10px;
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
@@ -164,6 +180,10 @@
     padding-left: 30px;
     border-top-right-radius: initial;
     border-bottom-right-radius: initial;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 18px;
   }
 }
 
@@ -271,6 +291,11 @@
     width: 12px;
     height: 15px;
     background-image: url("../img/svg/polygon.svg");
+
+    @media (min-width: $tablet-width) {
+      top: 36px;
+      left: 31px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -281,18 +306,6 @@
     font-size: 24px;
     line-height: 24px;
     text-align: left;
-
-    &::before {
-      position: absolute;
-      content: "";
-      top: 20px;
-      right: 23px;
-      width: 0;
-      height: 0;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      border-left: 14px solid $basic-blue-light;
-    }
   }
 
   @media (min-width: $desktop-width) {

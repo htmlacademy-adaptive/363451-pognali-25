@@ -6,11 +6,82 @@
 
   @media (min-width: $tablet-width) {
     align-items: flex-start;
-    margin-top: 0;
+    margin-top: -2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 74%;
+    margin-top: 6px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 }
 
-.main-nav__contacts {
+.main-nav__user-list {
+  @include reset;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  order: 1;
+
+  @media (min-width: $tablet-width) {
+    order: 0;
+    margin-left: auto;
+  }
+}
+
+.main-nav__user-item--hide {
+  display: none;
+}
+
+.main-nav__user-item--login {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__user-link {
   display: flex;
   justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: $special-orange;
+
+  &--email {
+    background-color: $special-yellow-dark;
+  }
+
+  &--login {
+    display: block;
+    text-align: center;
+    padding: 12px 80px;
+    margin-bottom: 50px;
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: $basic-yellow;
+    color: $basic-blue;
+    border-radius: 25px;
+
+    &:hover {
+      background-color: $special-yellow-dark;
+    }
+
+    &:active {
+      color: $link-opacity;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+      padding: 10px 29px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
 }

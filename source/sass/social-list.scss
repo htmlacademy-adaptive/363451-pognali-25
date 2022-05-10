@@ -1,7 +1,5 @@
 .social-list {
-  @include reset;
   order: 3;
-  display: flex;
 }
 
 .social-list__link {
@@ -19,10 +17,22 @@
     width: 45px;
     height: 45px;
     background-color: $basic-yellow;
+
+    @media (min-width: $tablet-width) {
+      width: 62px;
+      height: 62px;
+    }
   }
 }
 
 .social-list__link img {
   width: 23px;
   height: 23px;
+}
+
+.social-list__link--footer img {
+  @media (min-width: $tablet-width) {
+    width: 42px;
+    height: 42px;
+  }
 }

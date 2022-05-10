@@ -18,12 +18,12 @@
     width: 1320px;
     flex-wrap: nowrap;
     margin-top: 0;
+    padding-bottom: 125px;
   }
 }
 
 .features__item {
   position: relative;
-  width: 100%;
   min-height: 90px;
   margin-top: -10px;
   padding-top: 22px;
@@ -36,67 +36,9 @@
   color: $basic-blue;
   box-sizing: border-box;
 
-  &--special-orange {
-    background-color: $special-orange;
-    border-radius: 10px 10px 0 0;
-
-    @media (min-width: $tablet-width) {
-      border-radius: 20px 0 0 0;
-    }
-
-    @media (min-width: $desktop-width) {
-      border-radius: 10px 0 0 10px;
-    }
-  }
-
-  &--basic-orange {
-    background-color: $basic-orange;
-    border-radius: 10px 10px 0 0;
-
-    @media (min-width: $tablet-width) {
-      border-radius: 0 20px 0 0;
-    }
-  }
-
-  &--yellow-dark {
-    background-color: $special-yellow-dark;
-
-    @media (min-width: $tablet-width) {
-      border-radius: 0 0 0 20px;
-    }
-  }
-
-  &--basic-yellow {
-    background-color: $basic-yellow;
-
-    @media (min-width: $tablet-width) {
-      border-radius: 0 0 20px 0;
-    }
-
-    @media (max-width: $mobile-width-only) {
-      min-height: 80px;
-      border-radius: 0 0 10px 10px;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    counter-increment: number;
-    content: counter(number);
-    top: 23px;
-    right: 23px;
-
-    font-size: 18px;
-    line-height: 1;
-    font-weight: 700;
-    text-align: center;
-
-    color: $color-white;
-  }
-
   @media (min-width: $tablet-width) {
-    margin-top: 0;
     width: 50%;
+    margin-top: 0;
     min-height: 140px;
     padding-top: 29px;
     padding-left: 32px;
@@ -114,9 +56,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 100%;
     min-height: max-content;
-    border-radius: 20px 0 0 20px;
+    padding-top: 24px;
+    padding-bottom: 32px;
 
     &::after {
       font-size: 24px;
@@ -126,5 +68,92 @@
       left: auto;
       bottom: auto;
     }
+
+    &:not(:last-child)::after {
+      top: 26px;
+      right: 64px;
+    }
+  }
+
+  &--special-orange {
+    background-color: $special-orange;
+    border-radius: 10px 10px 0 0;
+
+    @media (min-width: $tablet-width) {
+      border-radius: 20px 0 0 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-radius: 20px 0 0 20px;
+      z-index: 0;
+      width: 345px;
+    }
+  }
+
+  &--basic-orange {
+    background-color: $basic-orange;
+    border-radius: 10px 10px 0 0;
+
+    @media (min-width: $tablet-width) {
+      border-radius: 0 20px 0 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-radius: 20px 0 0 20px;
+      width: 375px;
+    }
+  }
+
+  &--yellow-dark {
+    background-color: $special-yellow-dark;
+
+    @media (min-width: $tablet-width) {
+      border-radius: 0 0 0 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-radius: 20px 0 0 20px;
+      width: 375px;
+    }
+  }
+
+  &--basic-yellow {
+    background-color: $basic-yellow;
+
+    @media (min-width: $tablet-width) {
+      border-radius: 0 0 20px 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      border-radius: 20px 20px 20px 20px;
+      width: 315px;
+    }
+
+    @media (max-width: $mobile-width-only) {
+      min-height: 80px;
+      border-radius: 0 0 10px 10px;
+    }
+  }
+
+  &:not(:first-child) {
+    @media (min-width: $desktop-width) {
+      margin-left: -30px;
+      padding-right: 80px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    counter-increment: number;
+    content: counter(number);
+    top: 23px;
+    right: 23px;
+
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+
+    color: $color-white;
   }
 }

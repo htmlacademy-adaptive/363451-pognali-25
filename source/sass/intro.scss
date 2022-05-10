@@ -4,7 +4,7 @@
   background-image: url("../img/png/globe-back-mobile1.png");
   background-repeat: no-repeat;
   background-position: -80px -20px;
-  background-size: 400px 433px;
+  background-size: 400px 426px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/png/globe-back-mobile2.png");
@@ -26,7 +26,7 @@
     background-color: $intro-desktop;
     background-image: url("../img/png/globe-back-desktop.png");
     background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: -4px -97px;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
@@ -39,21 +39,23 @@
   @include container;
   background-image: url("../img/png/traveller-illustration-mobile1.png");
   background-repeat: no-repeat;
-  background-position: 82px 157px;
+  background-position: 82px 150px;
 
   @media (min-width: $tablet-width) {
+    padding-top: 22px;
     background-image: url("../img/png/traveller-illustration-tablet.png");
     background-repeat: no-repeat;
-    background-position: 285px 248px;
+    background-position: 285px 267px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 418px 1fr;
     grid-template-rows: 420px 1fr;
+    padding-top: 0;
     background-image: url("../img/png/traveller-illustration-desktop.png");
     background-repeat: no-repeat;
-    background-position: 605px 0;
+    background-position: 605px 8px;
   }
 }
 
@@ -61,7 +63,7 @@
   display: inline-block;
   margin: 0;
   padding: 0;
-  padding-top: 24px;
+  padding-top: 18px;
   margin-bottom: 228px;
   font-size: 36px;
   line-height: 40px;
@@ -72,7 +74,7 @@
     padding: 0 148px;
     font-size: 60px;
     line-height: 70px;
-    margin-bottom: 83px;
+    margin-bottom: 63px;
   }
 
   @media (min-width: $desktop-width) {
@@ -80,6 +82,17 @@
     vertical-align: top;
     text-align: left;
     padding-left: 69px;
+    padding-top: 100px;
+  }
+}
+
+.intro .main-header__user-list {
+  .main-header__user-item--hide {
+    display: block;
+  }
+
+  .main-header__user-link--login {
+    padding: 5px 40px;
   }
 }
 
@@ -138,7 +151,7 @@
   flex-direction: column;
   width: 155px;
   padding-left: 25px;
-  padding-top: 6px;
+  padding-top: 25px;
   padding-right: 100px;
 
   @media (min-width: $tablet-width) {
@@ -150,8 +163,8 @@
   @media (min-width: $desktop-width) {
     margin-left: auto;
     vertical-align: middle;
-    padding-top: 122px;
-    padding-right: 40px;
+    padding-top: 115px;
+    padding-right: 26px;
   }
 }
 

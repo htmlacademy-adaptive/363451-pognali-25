@@ -33,7 +33,7 @@
   @include container;
   padding-top: 32px;
   padding-bottom: 82px;
-  padding-left: 29px;
+  padding-left: 49px;
   padding-right: 52px;
   margin: 0 auto;
   background-image: url("../img/png/about-mobile.png");
@@ -50,11 +50,12 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 40px;
+    margin-top: 88px;
     padding-bottom: 163px;
+    padding-left: 130px;
 
     background-image: url("../img/png/about-desktop.png");
-    background-position: right;
+    background-position: top 0 right 60px;
   }
 }
 
@@ -105,7 +106,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 619px;
+    width: 50%;
+    padding-bottom: 42px;
 
     &--bold {
       width: 425px;
@@ -134,20 +136,15 @@
     &::before {
       position: absolute;
       content: "";
-      top: 20px;
-      right: 23px;
-      width: 0;
-      height: 0;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      border-left: 14px solid $basic-blue-light;
+      top: 23px;
+      right: 22px;
+      width: 12px;
+      height: 15px;
+      background-image: url("../img/svg/polygon.svg");
 
       @media (min-width: $tablet-width) {
-        top: 33px;
-        right: 37px;
-        border-top: 7px solid transparent;
-        border-bottom: 7px solid transparent;
-        border-left: 10px solid $basic-blue-light;
+        top: 35px;
+        right: 35px;
       }
     }
   }

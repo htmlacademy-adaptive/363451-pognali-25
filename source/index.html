@@ -7,70 +7,93 @@
     <link href="./css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
-    <header class="main-header main-header--index main-header--nojs">
+    <header class="main-header main-header--opened main-header--nojs">
       <div class="main-header__container">
-        <div class="main-header__inner">
-          <a class="main-header__logo logo">
-            <picture class="logo__image">
-              <source media="(min-width: 1200px)" srcset="./img/svg/logo_full.svg">
-              <source media="(min-width: 768px)" srcset="./img/svg/logo_full.svg">
-              <img src="./img/svg/logo_mobile.svg" alt="логотип сайта Погнали">
-            </picture>
-            <picture class="logo__image--dark">
-              <source media="(min-width: 1200px)" srcset="./img/svg/logo_full--dark.svg">
-              <source media="(min-width: 768px)" srcset="./img/svg/logo_full--dark.svg">
-              <img src="./img/svg/logo_mobile--dark.svg" alt="логотип сайта Погнали">
-            </picture>
-          </a>
-          <button class="main-header__toggle main-header__toggle--nojs" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-        </div>
-        <nav class="main-nav">
-          <ul class="main-nav__contacts contacts-list">
-            <li class="contacts-list__item contacts-list__item--hide">
-              <a class="contacts-list__link contacts-list__link contacts-list__phone" href="tel:78128121212">
-                <span class="">8 800 555-86-28</span>
-              </a>
-            </li>
-            <li class="contacts-list__item contacts-list__item--hide">
-              <a class="contacts-list__link contacts-list__link contacts-list__email" href="#">
-                <span class="">mail@htmlacademy.ru</span>
-              </a>
-            </li>
-            <li class="contacts-list__item contacts-list__item--login">
-              <a class="contacts-list__login" href="#">Авторизация</a>
-            </li>
-          </ul>
-          <ul class="main-nav__site-list site-list">
-            <li class="site-list__item">
-              <a class="site-list__link">О сервисе</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="./form.html">Направления</a>
-            </li>
-            <li class="site-list__item">
-              <a class="site-list__link" href="./catalog.html">Попутчики</a>
-            </li>
-          </ul>
-          <ul class="main-nav__social-list social-list">
-            <li class="social-list__item">
-              <a class="social-list__link" href="#">
-                <img src="./img/svg/telegram.svg" alt="Телеграм" width="23" height="23">
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="https://www.vk.com/htmlacademy">
-                <img src="./img/svg/vkontakte.svg" alt="Вконтакте" width="23" height="23">
-              </a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="#">
-                <img src="./img/svg/youtube.svg" alt="Youtube" width="23" height="23">
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <a class="main-header__logo">
+          <picture class="main-header__logo-image">
+            <source media="(min-width: 1200px)" srcset="./img/svg/logo_full.svg">
+            <source media="(min-width: 768px)" srcset="./img/svg/logo_full.svg">
+            <img src="./img/svg/logo_mobile.svg" alt="логотип сайта Погнали">
+          </picture>
+          <picture class="main-header__logo-image--dark">
+            <source media="(min-width: 1200px)" srcset="./img/svg/logo_full--dark.svg">
+            <source media="(min-width: 768px)" srcset="./img/svg/logo_full--dark.svg">
+            <img src="./img/svg/logo_mobile--dark.svg" alt="логотип сайта Погнали">
+          </picture>
+        </a>
+        <button class="main-header__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-header__user-list">
+          <li class="main-header__user-item main-header__user-item--hide">
+            <a class="main-header__user-link" href="tel:78128121212">
+              <svg class="main-header__user-icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.77423 8.22389C9.77423 8.41289 9.92786 8.56139 10.1156 8.56139C10.5048 8.56139 10.8189 8.87526 10.8189 9.25664C10.8189 9.44226 10.9725 9.59414 11.1602 9.59414C11.348 9.59414 11.5016 9.44226 11.5016 9.25664C11.5016 8.50064 10.8803 7.88639 10.1156 7.88639C9.92786 7.88639 9.77423 8.03827 9.77423 8.22389ZM15.3319 9.59414C15.5231 9.59414 15.6733 9.44226 15.6733 9.25664C15.6733 6.22589 13.1812 3.76215 10.1156 3.76215C9.92786 3.76215 9.77423 3.914 9.77423 4.09965C9.77423 4.28527 9.92786 4.43715 10.1156 4.43715C12.8057 4.43715 14.9905 6.60051 14.9905 9.25664C14.9905 9.44226 15.1441 9.59414 15.3319 9.59414Z" fill="#161C35"/>
+                <path d="M12.9047 9.25661C12.9047 9.44223 13.0583 9.59411 13.2461 9.59411C13.4338 9.59411 13.5874 9.44223 13.5874 9.25661C13.5874 7.36324 12.0307 5.82424 10.1156 5.82424C9.92786 5.82424 9.77423 5.97612 9.77423 6.16174C9.77423 6.35074 9.92786 6.49924 10.1156 6.49924C11.6552 6.49924 12.9047 7.73786 12.9047 9.25661ZM10.1156 1.69998C9.92786 1.69998 9.77423 1.85186 9.77423 2.03748C9.77423 2.22312 9.92786 2.37498 10.1156 2.37498C13.9561 2.37498 17.0798 5.46312 17.0798 9.25661C17.0798 9.44223 17.23 9.59411 17.4211 9.59411C17.6089 9.59411 17.7625 9.44223 17.7625 9.25661C17.7625 5.0885 14.3316 1.69998 10.1156 1.69998ZM13.4509 12.8139L13.0037 13.0535C12.2492 13.4619 11.6621 14.5812 10.7311 13.7375L8.30007 11.3L6.2 9.25661C5.14491 7.92348 6.32631 7.60623 6.73936 6.85699L6.98175 6.41825C7.25485 5.91873 7.35384 5.35849 7.27191 4.79823C7.1934 4.23799 6.93737 3.72836 6.52771 3.32336C6.02931 2.83062 5.36703 2.56062 4.66038 2.56062C3.95372 2.56062 3.28802 2.83062 2.7896 3.32336L2.61552 3.49886C1.69379 4.41012 1.58796 5.97948 2.3151 7.92348C3.00126 9.77973 4.38386 11.7912 6.2 13.5867C8.96858 16.3239 12.0512 17.9 14.2634 17.9C15.1373 17.9 15.8781 17.6536 16.4038 17.1339L16.5813 16.9584C17.0763 16.469 17.3529 15.8142 17.3563 15.1089C17.3529 14.4204 17.0695 13.7454 16.5813 13.2627C15.7586 12.4494 14.4716 12.2671 13.4509 12.8139Z" fill="#161C35"/>
+              </svg>
+            </a>
+          </li>
+          <li class="main-header__user-item main-header__user-item--hide">
+            <a class="main-header__user-link main-header__user-link--email" href="#">
+              <svg class="main-header__user-icon" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.01661 3.32528L8.76661 7.55572C8.99341 7.69747 9.28681 7.76467 9.58201 7.76467C9.87721 7.76467 10.1706 7.69747 10.3974 7.55572L17.1474 3.32528C17.5875 3.04913 18.0033 1.97498 17.196 1.97498H1.96891C1.16161 1.97498 1.57741 3.04913 2.01661 3.32528ZM17.3517 5.63842L10.3974 9.86677C10.0914 10.0537 9.87721 10.0757 9.58201 10.0757C9.28681 10.0757 9.07261 10.0537 8.76661 9.86677C8.46061 9.67987 2.34691 5.94082 1.84741 5.63737C1.49641 5.42317 1.50001 5.67412 1.50001 5.86732V13.525C1.50001 13.966 2.00941 14.575 2.40001 14.575H16.8C17.1906 14.575 17.7 13.966 17.7 13.525V5.86837C17.7 5.67517 17.7036 5.42422 17.3517 5.63842Z" fill="#161C35"/>
+              </svg>
+            </a>
+          </li>
+          <li class="main-header__user-item main-header__user--login">
+            <a class="main-header__user-link--login" href="#">Авторизация</a>
+          </li>
+        </ul>
+        <ul class="main-header__contacts">
+          <li class="main-header__contacts-item">
+            <a class="main-header__contacts-link" href="tel:78128121212">
+              <div class="main-header__contacts-icon">
+                <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M9.50001 1.08615C6.70356 1.08615 3.90039 1.55882 2.88328 2.50093C2.0394 3.28252 1.7581 4.66329 1.66328 5.53753C1.66328 5.53753 1.65021 5.62393 1.65021 5.66109C1.65021 6.00391 1.94451 6.27887 2.30433 6.27887C2.34684 6.27887 3.92008 6.15837 4.86857 6.08425C4.8914 6.08112 4.9144 6.07806 4.93722 6.07191C5.29049 6.0627 5.57511 5.7908 5.57511 5.45413L5.57828 4.237C5.57828 3.86014 5.9022 3.55737 6.30126 3.55737H12.6987C13.0979 3.55737 13.4218 3.86011 13.4218 4.237L13.425 5.45413C13.425 5.7908 13.7096 6.0627 14.0628 6.07191C14.0855 6.0781 14.1085 6.08112 14.1316 6.08425C15.0802 6.15834 16.6534 6.27887 16.6957 6.27887C17.0554 6.27887 17.3499 6.00391 17.3499 5.66109C17.3499 5.62393 17.3369 5.53753 17.3369 5.53753C17.242 4.66329 16.961 3.28255 16.1171 2.50093C15.0996 1.55882 12.2965 1.08615 9.50001 1.08615ZM9.50001 9.11773C8.77717 9.11773 8.1917 9.67064 8.1917 10.3533C8.1917 11.036 8.77717 11.5889 9.50001 11.5889C10.2229 11.5889 10.8083 11.036 10.8083 10.3533C10.8083 9.67064 10.2229 9.11773 9.50001 9.11773ZM8.51879 6.33752V5.56528C8.51879 5.13902 8.15242 4.79304 7.70113 4.79304C7.24983 4.79304 6.88346 5.13905 6.88346 5.56528V6.33752L2.47101 10.7889C2.16695 11.07 1.9772 11.4622 1.9772 11.8948V13.1335C1.9772 13.8162 2.5627 14.3691 3.28551 14.3691H3.6126V15.1414C3.6126 15.5677 3.97901 15.9136 4.43031 15.9136C4.8816 15.9136 5.24798 15.5677 5.24798 15.1414V14.3691H13.752V15.1414C13.752 15.5677 14.1183 15.9136 14.5698 15.9136C15.0211 15.9136 15.3874 15.5677 15.3874 15.1414V14.3691H15.7145C16.4373 14.3691 17.0228 13.8162 17.0228 13.1335V11.8948C17.0228 11.4622 16.833 11.07 16.5289 10.7889L12.1167 6.33752V5.56528C12.1167 5.13902 11.7502 4.79304 11.2989 4.79304C10.8476 4.79304 10.4813 5.13905 10.4813 5.56528V6.33752H8.51879ZM9.50001 7.8821C10.9457 7.8821 12.1167 8.98799 12.1167 10.3533C12.1167 11.7187 10.9457 12.8247 9.50001 12.8247C8.05432 12.8247 6.88342 11.7187 6.88342 10.3533C6.88342 8.98795 8.05432 7.8821 9.50001 7.8821Z" fill="#FFD74B"/>
+                </svg>
+              </div>
+              <span class="main-header__contacts-text">8 800 555-86-28</span>
+            </a>
+          </li>
+          <li class="main-header__contacts-item">
+            <a class="main-header__contacts-link" href="#">
+              <div class="main-header__contacts-icon">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M19.1393 16.4663L14.8089 12.5L19.1393 8.53365L18.5488 7.90264L12.25 13.6719L5.9512 7.90264L5.36069 8.53365L9.69112 12.5L5.36069 16.4663L5.9512 17.0974L10.3308 13.0859L12.25 14.8438L14.1692 13.0859L18.5488 17.0974L19.1393 16.4663ZM4.57597 6.25C3.76695 6.25 3.11111 6.94884 3.11111 7.80786V17.1921C3.11111 18.0525 3.76163 18.75 4.57597 18.75H19.924C20.7331 18.75 21.3889 18.0512 21.3889 17.1921V7.80786C21.3889 6.94748 20.7384 6.25 19.924 6.25H4.57597Z" fill="#FFD74B"/>
+                </svg>
+              </div>
+              <span class="main-header__contacts-text">mail@htmlacademy.ru</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="main-header__site-list">
+          <li class="main-header__site-item">
+            <a class="main-header__site-link">О сервисе</a>
+          </li>
+          <li class="main-header__site-item">
+            <a class="main-header__site-link" href="./form.html">Направления</a>
+          </li>
+          <li class="main-header__site-item">
+            <a class="main-header__site-link" href="./catalog.html">Попутчики</a>
+          </li>
+        </ul>
+        <ul class="main-header__social-list social-list">
+          <li class="social-list__item">
+            <a class="social-list__link" href="#">
+              <img src="./img/svg/telegram.svg" alt="Телеграм" width="23" height="23">
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="https://www.vk.com/htmlacademy">
+              <img src="./img/svg/vkontakte.svg" alt="Вконтакте" width="23" height="23">
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="#">
+              <img src="./img/svg/youtube.svg" alt="Youtube" width="23" height="23">
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
     <main class="main-container">
@@ -78,24 +101,24 @@
       <section class="intro">
         <div class="intro__container">
           <h2 class="intro__title">В&nbsp;путешествие с&nbsp;крутыми попутчиками!</h2>
-          <ul class="intro__list">
-            <li class="intro__item">
-              <a class="intro__link intro__link--phone" href="tel:78128121212">
-                <svg class="intro__icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ul class="main-header__user-list main-header__user-list--intro">
+            <li class="main-header__user-item main-header__user-item--hide">
+              <a class="main-header__user-link" href="tel:78128121212">
+                <svg class="main-header__user-icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M9.77423 8.22389C9.77423 8.41289 9.92786 8.56139 10.1156 8.56139C10.5048 8.56139 10.8189 8.87526 10.8189 9.25664C10.8189 9.44226 10.9725 9.59414 11.1602 9.59414C11.348 9.59414 11.5016 9.44226 11.5016 9.25664C11.5016 8.50064 10.8803 7.88639 10.1156 7.88639C9.92786 7.88639 9.77423 8.03827 9.77423 8.22389ZM15.3319 9.59414C15.5231 9.59414 15.6733 9.44226 15.6733 9.25664C15.6733 6.22589 13.1812 3.76215 10.1156 3.76215C9.92786 3.76215 9.77423 3.914 9.77423 4.09965C9.77423 4.28527 9.92786 4.43715 10.1156 4.43715C12.8057 4.43715 14.9905 6.60051 14.9905 9.25664C14.9905 9.44226 15.1441 9.59414 15.3319 9.59414Z" fill="#161C35"/>
                   <path d="M12.9047 9.25661C12.9047 9.44223 13.0583 9.59411 13.2461 9.59411C13.4338 9.59411 13.5874 9.44223 13.5874 9.25661C13.5874 7.36324 12.0307 5.82424 10.1156 5.82424C9.92786 5.82424 9.77423 5.97612 9.77423 6.16174C9.77423 6.35074 9.92786 6.49924 10.1156 6.49924C11.6552 6.49924 12.9047 7.73786 12.9047 9.25661ZM10.1156 1.69998C9.92786 1.69998 9.77423 1.85186 9.77423 2.03748C9.77423 2.22312 9.92786 2.37498 10.1156 2.37498C13.9561 2.37498 17.0798 5.46312 17.0798 9.25661C17.0798 9.44223 17.23 9.59411 17.4211 9.59411C17.6089 9.59411 17.7625 9.44223 17.7625 9.25661C17.7625 5.0885 14.3316 1.69998 10.1156 1.69998ZM13.4509 12.8139L13.0037 13.0535C12.2492 13.4619 11.6621 14.5812 10.7311 13.7375L8.30007 11.3L6.2 9.25661C5.14491 7.92348 6.32631 7.60623 6.73936 6.85699L6.98175 6.41825C7.25485 5.91873 7.35384 5.35849 7.27191 4.79823C7.1934 4.23799 6.93737 3.72836 6.52771 3.32336C6.02931 2.83062 5.36703 2.56062 4.66038 2.56062C3.95372 2.56062 3.28802 2.83062 2.7896 3.32336L2.61552 3.49886C1.69379 4.41012 1.58796 5.97948 2.3151 7.92348C3.00126 9.77973 4.38386 11.7912 6.2 13.5867C8.96858 16.3239 12.0512 17.9 14.2634 17.9C15.1373 17.9 15.8781 17.6536 16.4038 17.1339L16.5813 16.9584C17.0763 16.469 17.3529 15.8142 17.3563 15.1089C17.3529 14.4204 17.0695 13.7454 16.5813 13.2627C15.7586 12.4494 14.4716 12.2671 13.4509 12.8139Z" fill="#161C35"/>
                 </svg>
               </a>
             </li>
-            <li class="intro__item">
-              <a class="intro__link intro__link--email" href="#">
-                <svg class="intro__icon" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <li class="main-header__user-item main-header__user-item--hide">
+              <a class="main-header__user-link main-header__user-link--email" href="#">
+                <svg class="main-header__user-icon" width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.01661 3.32528L8.76661 7.55572C8.99341 7.69747 9.28681 7.76467 9.58201 7.76467C9.87721 7.76467 10.1706 7.69747 10.3974 7.55572L17.1474 3.32528C17.5875 3.04913 18.0033 1.97498 17.196 1.97498H1.96891C1.16161 1.97498 1.57741 3.04913 2.01661 3.32528ZM17.3517 5.63842L10.3974 9.86677C10.0914 10.0537 9.87721 10.0757 9.58201 10.0757C9.28681 10.0757 9.07261 10.0537 8.76661 9.86677C8.46061 9.67987 2.34691 5.94082 1.84741 5.63737C1.49641 5.42317 1.50001 5.67412 1.50001 5.86732V13.525C1.50001 13.966 2.00941 14.575 2.40001 14.575H16.8C17.1906 14.575 17.7 13.966 17.7 13.525V5.86837C17.7 5.67517 17.7036 5.42422 17.3517 5.63842Z" fill="#161C35"/>
                 </svg>
               </a>
             </li>
-            <li class="intro__item">
-              <a class="intro__login" href="#">Авторизация</a>
+            <li class="main-header__user-item main-header__user--login">
+              <a class="main-header__user-link--login" href="#">Авторизация</a>
             </li>
           </ul>
           <div class="intro__review">
@@ -109,7 +132,7 @@
           <ol class="intro__nav features">
             <li class="features__item features__item--special-orange">Выберите направление</li>
             <li class="features__item features__item--basic-orange">Изучите идеи путешественников</li>
-            <li class="features__item features__item--yellow-dark">Находите тех, кто похож на вас</li>
+            <li class="features__item features__item--yellow-dark">Находите тех, кто&nbsp;похож на вас</li>
             <li class="features__item features__item--basic-yellow">Путешествуйте вместе!</li>
           </ol>
         </div>
@@ -175,7 +198,7 @@
         <div class="companions__container">
           <h2 class="companions__title">Попутчики</h2>
           <p class="companions__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-          <p class="companions__text--bold">Теперь можно легко найти единомышленников!</p>
+          <p class="companions__text--bold">Теперь можно легко найти&nbsp;единомышленников!</p>
           <ul class="companions__list">
             <li class="companions__item">
               <div class="companions__level level">
@@ -267,15 +290,15 @@
               <div class="companions__country country-flag">
                 <ul class="companions__list country-flag__list">
                   <li class="country-flag__item">
-                    <img src="./img/svg/belgium.svg" alt="Бельгия" width="35" height="20">
+                    <img src="./img/svg/belgium.svg" alt="Бельгия" width="35" height="25">
                   </li>
                   <li class="country-flag__item">
-                    <img src="./img/svg/czech.svg" alt="Чехия" width="35" height="20">
+                    <img src="./img/svg/czech.svg" alt="Чехия" width="35" height="25">
                   </li>
                 </ul>
               </div>
               <div class="companions__inner">
-                <h3 class="companions__subtitle">Петя Демин</h3>
+                <h3 class="companions__subtitle companions__subtitle--green">Петя Демин</h3>
                 <p class="companions__hashtags hashtags">
                   #бургер #бар #футбол #концерт #крафт
                 </p>
@@ -394,12 +417,25 @@
             </button>
           </form>
           <p class="interested__text interested__text--last">Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!</p>
-          <ul class="interested__list contacts-list">
-            <li class="contacts-list__item">
-              <a class="contacts-list__link contacts-list__phone interested__link" href="tel:78128121212">8 800 555-86-28</a>
+          <ul class="interested__list">
+            <li class="interested__item">
+              <a class="interested__link-contacts contacts-list__phone" href="tel:78128121212">
+                <div class="interested__image">
+                  <svg width="19" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 0.796875C7.77425 0.796875 3.53833 1.51113 2.00137 2.93476C0.72618 4.11583 0.301098 6.20233 0.157809 7.52341C0.157809 7.52341 0.138062 7.65396 0.138062 7.71011C0.138062 8.22816 0.582782 8.64365 1.12651 8.64365C1.19076 8.64365 3.56809 8.46157 5.00137 8.34956C5.03586 8.34484 5.07062 8.34021 5.10511 8.33091C5.63894 8.31699 6.06902 7.90612 6.06902 7.39738L6.07381 5.55816C6.07381 4.98869 6.5633 4.53117 7.16633 4.53117H16.8336C17.4367 4.53117 17.9263 4.98863 17.9263 5.55816L17.9311 7.39738C17.9311 7.90612 18.3611 8.31699 18.8949 8.33091C18.9292 8.34026 18.9639 8.34484 18.9988 8.34956C20.4322 8.46151 22.8095 8.64365 22.8735 8.64365C23.417 8.64365 23.8621 8.22816 23.8621 7.71011C23.8621 7.65396 23.8423 7.52341 23.8423 7.52341C23.6989 6.20233 23.2743 4.11588 21.9991 2.93476C20.4616 1.51113 16.2257 0.796875 12 0.796875ZM12 12.9335C10.9077 12.9335 10.023 13.769 10.023 14.8006C10.023 15.8322 10.9077 16.6677 12 16.6677C13.0923 16.6677 13.9769 15.8322 13.9769 14.8006C13.9769 13.769 13.0923 12.9335 12 12.9335ZM10.5173 8.73228V7.56533C10.5173 6.92121 9.96363 6.39839 9.28167 6.39839C8.59971 6.39839 8.04608 6.92126 8.04608 7.56533V8.73228L1.37838 15.4588C0.918919 15.8837 0.632177 16.4763 0.632177 17.13V19.0018C0.632177 20.0334 1.51694 20.8689 2.60918 20.8689H3.10346V22.036C3.10346 22.6801 3.65714 23.2028 4.3391 23.2028C5.02106 23.2028 5.57469 22.6801 5.57469 22.036V20.8689H18.4253V22.036C18.4253 22.6801 18.9787 23.2028 19.661 23.2028C20.3429 23.2028 20.8965 22.6801 20.8965 22.036V20.8689H21.3907C22.483 20.8689 23.3677 20.0334 23.3677 19.0018V17.13C23.3677 16.4762 23.081 15.8836 22.6215 15.4588L15.954 8.73228V7.56533C15.954 6.92121 15.4003 6.39839 14.7184 6.39839C14.0364 6.39839 13.4828 6.92126 13.4828 7.56533V8.73228H10.5173ZM12 11.0663C14.1846 11.0663 15.954 12.7374 15.954 14.8006C15.954 16.8638 14.1846 18.5351 12 18.5351C9.81539 18.5351 8.04603 16.8639 8.04603 14.8006C8.04603 12.7374 9.81539 11.0663 12 11.0663Z" fill="#FFD74B"/>
+                  </svg>
+                </div>
+                8 800 555-86-28</a>
             </li>
-            <li class="contacts-list__item">
-              <a class="contacts-list__link contacts-list__email interested__link" href="#">mail@htmlacademy.ru</a>
+            <li class="interested__item">
+              <a class="interested__link-contacts contacts-list__email" href="#">
+                <div class="interested__image">
+                  <svg width="19" height="13" viewBox="0 0 28 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.5439 15.5044L18.0001 9.51085L24.5439 3.51726L23.6516 2.56374L14.1334 11.2817L4.61517 2.56374L3.72284 3.51726L10.2666 9.51085L3.72284 15.5044L4.61517 16.458L11.2333 10.3963L14.1334 13.0525L17.0334 10.3963L23.6516 16.458L24.5439 15.5044ZM2.53704 0.0664062C1.31453 0.0664062 0.323486 1.12243 0.323486 2.42051V16.6012C0.323486 17.9013 1.30649 18.9553 2.53704 18.9553H25.7297C26.9522 18.9553 27.9432 17.8993 27.9432 16.6012V2.42051C27.9432 1.12037 26.9602 0.0664062 25.7297 0.0664062H2.53704Z" fill="#FFD74B"/>
+                  </svg>
+                </div>
+                mail@htmlacademy.ru
+              </a>
             </li>
           </ul>
         </div>
@@ -413,9 +449,7 @@
       </section>
       <section class="map">
         <h3 class="visually-hidden">Карта</h3>
-        <div>
-          <iframe class="map__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586828!2d30.32085335172623!3d59.93871648178729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1651674835775!5m2!1sru!2sru" width="320" height="424" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта"></iframe>
-        </div>
+        <iframe class="map__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586828!2d30.32085335172623!3d59.93871648178729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1651674835775!5m2!1sru!2sru" width="320" height="424" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта"></iframe>
       </section>
     </main>
     <section class="footer">

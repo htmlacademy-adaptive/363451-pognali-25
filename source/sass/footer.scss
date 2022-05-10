@@ -1,26 +1,29 @@
 .footer {
-  box-sizing: border-box;
-  margin-top: -84px;
-}
-
-.footer__container {
-  @include container;
+  margin-top: -111px;
+  padding-top: 35px;
   background-color: $color-white;
   border-radius: 30px 30px 0 0;
 
   @media (min-width: $tablet-width) {
-    padding-top: 46px;
-    padding-bottom: 32px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-top: -70px;
+    padding-top: 56px;
     border-radius: 60px 60px 0 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 47px;
-    padding-bottom: 43px;
+    margin-top: -135px;
+    padding-bottom: 30px;
+  }
+}
+
+.footer__container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -28,18 +31,33 @@
 .footer__logo {
   display: block;
   text-align: center;
+  margin-bottom: 40px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 0;
+    margin-right: 85px;
   }
 }
 
 .footer__social {
-  margin-top: 40px;
-  margin-bottom: 31px;
+  @include reset;
+  flex-grow: 1;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 37px;
+  order: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-top: -9px;
+    justify-content: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: center;
+    margin-left: 35px;
+  }
 }
 
 .footer__copyright {
@@ -47,6 +65,15 @@
   justify-content: space-between;
   padding-top: 17px;
   border-top: 1px solid $background-directions;
+
+  @media (min-width: $tablet-width) {
+    width: 22%;
+    padding-top: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: end;
+  }
 }
 
 .footer__link {
@@ -54,4 +81,13 @@
   text-decoration: none;
 
   color: $special-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 25px;
+  }
 }

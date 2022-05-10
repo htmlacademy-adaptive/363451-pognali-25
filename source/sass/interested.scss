@@ -28,17 +28,17 @@
 .interested__container {
   @include container;
   padding-top: 70px;
-  padding-bottom: 1px;
+  padding-bottom: 31px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     padding-top: 72px;
-    padding-bottom: 77px;
+    padding-bottom: 60px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 109px;
-    padding-bottom: 132px;
+    padding-top: 105px;
+    padding-bottom: 105px;
   }
 }
 
@@ -60,7 +60,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 57px;
+    margin-bottom: 40px;
   }
 }
 
@@ -80,7 +80,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 655px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 62px;
   }
 
   &--last {
@@ -91,6 +93,7 @@
 
     @media (min-width: $tablet-width) {
       padding-left: 0;
+      width: 100%;
     }
   }
 }
@@ -108,20 +111,27 @@
   color: $special-grey;
   background-color: $color-white;
 
-  border-radius: 20px;
+  border-radius: 10px;
 
   @media (min-width: $tablet-width) {
     margin-left: 36px;
     margin-right: 36px;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
+    border-radius: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 65px;
   }
 }
 
 .interested__input {
   width: 163px;
-  padding-top: 26px;
-  padding-bottom: 26px;
-  padding-left: 34px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  padding-left: 23px;
 
   font-size: 18px;
   line-height: 18px;
@@ -167,6 +177,7 @@
     width: 536px;
     font-size: 24px;
     line-height: 24px;
+    padding-left: 34px;
   }
 
   @media (min-width: $desktop-width) {
@@ -187,7 +198,7 @@
   background-color: $basic-yellow;
 
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   border-top-left-radius: initial;
   border-bottom-left-radius: initial;
 
@@ -199,11 +210,19 @@
     width: 12px;
     height: 15px;
     background-image: url("../img/svg/polygon.svg");
+
+    @media (min-width: $tablet-width) {
+      top: 33px;
+      right: 34px;
+    }
   }
 
   @media (min-width: $tablet-width) {
     width: 80px;
     height: 80px;
+    border-radius: 20px;
+    border-top-left-radius: initial;
+    border-bottom-left-radius: initial;
   }
 
 
@@ -226,6 +245,7 @@
 }
 
 .interested__list {
+  @include reset;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -233,11 +253,69 @@
   margin-top: 0;
 
   @media (min-width: $tablet-width) {
-    margin-left: 35px;
+    margin-left: 44px;
+    padding-top: 26px;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    justify-content: space-around;
+  }
+}
+
+.interested__item {
+  @media (min-width: $desktop-width) {
+    padding-left: 180px;
+
+    &:last-child {
+      padding-left: 127px;
+    }
+  }
+}
+
+.interested__link-contacts {
+  display: flex;
+  align-items: center;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $basic-yellow;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+.interested__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin-right: 17px;
+  border-radius: 50%;
+  background-color: $blue-icon;
+
+  @media (min-width: $tablet-width) {
+    width: 68px;
+    height: 68px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 90px;
+    height: 90px;
+  }
+
+  & svg {
+    @media (min-width: $tablet-width) {
+      width: 27px;
+      height: 26px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 32px;
+      height: 30px;
+    }
   }
 }
